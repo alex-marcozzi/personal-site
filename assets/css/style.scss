@@ -2,3 +2,135 @@
 ---
 
 @import 'jekyll-theme-hacker';
+
+:root {
+  --bg: #232629;
+  --text: #f2f2f2;
+  --muted: #b7bcc2;
+  --accent: #f5d547;
+  --content-width: 860px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+.container {
+  max-width: var(--content-width);
+}
+
+header {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header h1 {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+#a-title h1 {
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  margin-top: 0.75rem;
+}
+
+.site-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  text-decoration: underline;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover,
+a:focus {
+  color: var(--accent);
+}
+
+pre {
+  color: var(--text);
+}
+
+th {
+  border-bottom-color: var(--accent);
+}
+
+hr {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+ul li {
+  list-style-image: none;
+}
+
+ul li::marker {
+  color: var(--accent);
+}
+
+.breadcrumbs {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.breadcrumbs a {
+  color: var(--accent);
+}
+
+.breadcrumbs .sep {
+  margin: 0 0.5rem;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+.post-meta {
+  margin: 0.75rem 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.post-meta span + span {
+  margin-left: 1rem;
+}
+
+.writeups-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.writeups-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.writeups-list .meta {
+  margin-left: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.writeups-list .description {
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
