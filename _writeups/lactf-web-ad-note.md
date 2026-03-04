@@ -448,6 +448,8 @@ def hang_forever():
     return """"""
 ```
 
+<br/>
+
 ### Where To Go From Here?
 
 After lots of optimization (including small ones not mentioned in this writeup) and finding extra time, we're still not there quite yet. However, keep in mind that our algorithm is *inherantly random*. Finding the next char in the nonce could be done in a single trial, or 100. While this leads to inconsistancy, inconsistancy can be a very good thing when you have unlimited attempts but only need to succeed once.
@@ -455,6 +457,8 @@ After lots of optimization (including small ones not mentioned in this writeup) 
 After running the attack a number of times, I noticed that one of the runs was able to successfully retreive `5/8` of the nonce's characters. That's not back, but still not enough to get the flag, and getting good enough luck for the full `8/8` would probably take a day's worth of attempts.
 
 Remember that the charset is 16 digits. That means that to brute force the last 3 digits, we'd only have to submit `4096` guesses, which can be done in < 2 seconds! This is a huge realization, as it means that we really only have to complete `5/8`ths of the work to get the flag!
+
+<br/>
 
 ### Captchas And Faith
 
@@ -464,7 +468,11 @@ Site B required solving a captcha before beginning execution, which was extremel
 
 Run after run I watched the requests flow into my Attack Server's `/log` endpoint, reporting on the progress of my workers. Some runs found `0/8`, some found `3/8` in 20 seconds but then ended in disappointment.
 
-Finally, after about 20 minutes of repeatedly running the attack, I saw the flag outputted to my terminal.
+Finally, after about 20 minutes of repeatedly running the attack, I saw the flag outputted to my terminal:
+
+`lactf{53cur17y_v1a_m0n3t1z47i0n}`
+
+<br/>
 
 ## Closing Thoughts
 
